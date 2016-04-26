@@ -1,1 +1,15 @@
 C:\Users\sean\Documents\GitHub\t3\t3Final\t3Final\bin\Debug\t3Final.exe.config
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\bin\Debug\t3Final.exe.config
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\bin\Debug\t3Final.exe
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\bin\Debug\t3Final.pdb
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\bin\Debug\t3Final.xml
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.GameBoard1.resources
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.loginMenuForm.resources
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.mainMenuForm.resources
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.Resources.resources
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.scoreMenuForm.resources
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.setupMenuForm.resources
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.vbproj.GenerateResource.Cache
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.exe
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.xml
+C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.pdb

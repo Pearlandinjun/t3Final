@@ -12,8 +12,8 @@
     '   None
     Private Sub setupMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        player1RadioButton.Text = mainMenuForm.Board.player1.name   'Replace mainMenuForm with gameboard form
-        player2RadioButton.Text = mainMenuForm.Board.player2.name   'Replace mainMenuForm with gameboard form
+        player1RadioButton.Text = GameBoard1.Board.player1.name   'Replace mainMenuForm with gameboard form
+        player2RadioButton.Text = GameBoard1.Board.player2.name   'Replace mainMenuForm with gameboard form
 
     End Sub
 
@@ -32,27 +32,27 @@
             'Checks which radio button is selected 
             If player1RadioButton.Checked Then
                 'Sets the name of the players in the gameboard
-                mainMenuForm.Board.setPlayer(player1RadioButton.Text, player2RadioButton.Text)                                 'setPlayer(player1.name, player2.name)
+                GameBoard1.Board.setPlayer(player1RadioButton.Text, player2RadioButton.Text)                                 'setPlayer(player1.name, player2.name)
 
                 'This if statement changes chooseColorGroupbox.text to show the name of the player
                 'Ex: "Player.name choose your color"
-                If mainMenuForm.Board.player1.name = "Vader" Then
-                    chooseColorGroupBox.Text = mainMenuForm.Board.player2.name + " choose your color."      'Replace mainMenuForm with gameboard form
+                If GameBoard1.Board.player1.name = "Vader" Then
+                    chooseColorGroupBox.Text = GameBoard1.Board.player2.name + " choose your color."      'Replace mainMenuForm with gameboard form
                 Else
-                    chooseColorGroupBox.Text = mainMenuForm.Board.player1.name + " choose your color."      'Replace mainMenuForm with gameboard form
+                    chooseColorGroupBox.Text = GameBoard1.Board.player1.name + " choose your color."      'Replace mainMenuForm with gameboard form
                 End If
 
             ElseIf player2RadioButton.Checked Then
 
                 'Sets the name of the players in the gameboard
-                mainMenuForm.Board.setPlayer(player2RadioButton.Text, player1RadioButton.Text)                                 'setPlayer(player1.name, player2.name)
+                GameBoard1.Board.setPlayer(player2RadioButton.Text, player1RadioButton.Text)                                 'setPlayer(player1.name, player2.name)
 
                 'This if statement changes chooseColorGroupbox.text to show the name of the player depending on which player is Vader 
                 'Ex: "Player.name choose your color"
-                If mainMenuForm.Board.player2.name = "Vader" Then
-                    chooseColorGroupBox.Text = mainMenuForm.Board.player1.name + " choose your color."      'Replace mainMenuForm with gameboard form
+                If GameBoard1.Board.player2.name = "Vader" Then
+                    chooseColorGroupBox.Text = GameBoard1.Board.player1.name + " choose your color."      'Replace mainMenuForm with gameboard form
                 Else
-                    chooseColorGroupBox.Text = mainMenuForm.Board.player2.name + " choose your color."      'Replace mainMenuForm with gameboard form
+                    chooseColorGroupBox.Text = GameBoard1.Board.player2.name + " choose your color."      'Replace mainMenuForm with gameboard form
                 End If
 
             End If
@@ -75,11 +75,11 @@
             'If the difficulty groupbox is displayed then check which radio button is selected
             'then display the chooseColorGroupbox
             If easyRadioButton.Checked Then
-                mainMenuForm.Board.setDifficulty(0)
+                GameBoard1.Board.setDifficulty(0)
             ElseIf medRadioButton.Checked Then
-                mainMenuForm.Board.setDifficulty(1)
+                GameBoard1.Board.setDifficulty(1)
             ElseIf hardRadioButton.Checked Then
-                mainMenuForm.Board.setDifficulty(2)
+                GameBoard1.Board.setDifficulty(2)
             End If
 
             colorCount -= 1                      'Decrease the number of colors to be choosen by 1 since Vader doesn't choose a color
@@ -98,7 +98,7 @@
 
                     blueRadioButton.Visible = False
 
-                    chooseColorGroupBox.Text = mainMenuForm.Board.player2.name + " choose your color."         'Display "Player2.name choose your color"    'Replace mainMenuForm with gameboard form
+                    chooseColorGroupBox.Text = GameBoard1.Board.player2.name + " choose your color."         'Display "Player2.name choose your color"    'Replace mainMenuForm with gameboard form
 
                     colorCount -= 1                  'Decrease the number of colors to be choosen by 1 
 
@@ -109,7 +109,7 @@
 
                     greenRadioButton.Visible = False
 
-                    chooseColorGroupBox.Text = mainMenuForm.Board.player2.name + " choose your color."         'Display "Player2.name choose your color"    'Replace mainMenuForm with gameboard form
+                    chooseColorGroupBox.Text = GameBoard1.Board.player2.name + " choose your color."         'Display "Player2.name choose your color"    'Replace mainMenuForm with gameboard form
 
                     colorCount -= 1                  'Decrease the number of colors to be choosen by 1 
 
@@ -120,7 +120,7 @@
 
                     yellowRadioButton.Visible = False
 
-                    chooseColorGroupBox.Text = mainMenuForm.Board.player2.name + " choose your color."         'Display "Player2.name choose your color"    'Replace mainMenuForm with gameboard form
+                    chooseColorGroupBox.Text = GameBoard1.Board.player2.name + " choose your color."         'Display "Player2.name choose your color"    'Replace mainMenuForm with gameboard form
 
                     colorCount -= 1                  'Decrease the number of colors to be choosen by 1 
 
@@ -131,7 +131,7 @@
 
                     redRadioButton.Visible = False
 
-                    chooseColorGroupBox.Text = mainMenuForm.Board.player2.name + " choose your color."         'Display "Player2.name choose your color"    'Replace mainMenuForm with gameboard form
+                    chooseColorGroupBox.Text = GameBoard1.Board.player2.name + " choose your color."         'Display "Player2.name choose your color"    'Replace mainMenuForm with gameboard form
 
                     colorCount -= 1                  'Decrease the number of colors to be choosen by 1 
 

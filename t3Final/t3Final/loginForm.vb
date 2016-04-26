@@ -30,10 +30,10 @@
 
         If Not nameError Then
             If count = 2 Then
-                mainMenuForm.Board.player1.Login()
+                GameBoard1.Board.player1.Login()
                 count -= 1
             ElseIf count = 1 Then
-                mainMenuForm.Board.player2.Login()
+                GameBoard1.Board.player2.Login()
                 count -= 1
             End If
         End If
@@ -153,7 +153,4 @@
     '3. Testing 
 
 
-    Private Sub loginMenuForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class

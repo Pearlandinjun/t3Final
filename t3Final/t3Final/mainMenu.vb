@@ -1,6 +1,5 @@
 ﻿Public Class mainMenuForm
 
-    Public Board As boardClass = New boardClass() 'Remove after adding gameboard form
     'Exit button will close the program 
     Private Sub exitBtn_Click(sender As Object, e As EventArgs) Handles exitBtn.Click
         Me.Close()
@@ -32,7 +31,7 @@
         Me.Hide()
         'Has to display log in menu once
         loginMenuForm.setCount(1)
-        Board.player1.setVader()
+        GameBoard1.Board.player1.setVader()
         loginMenuForm.Show()
     End Sub
 
@@ -45,7 +44,9 @@
     '   Registration complete
     Private Sub registerBtn_Click(sender As Object, e As EventArgs) Handles registerBtn.Click
         Me.Hide()
-        Form1.Show()
+        loginMenuForm.setCount(3)
+        loginMenuForm.guestRadioButton.Visible = False
+        loginMenuForm.Show()
         ''Has to display modified log in menu once 
         'loginMenuForm.guestRadioButton.Visible = False
         'loginMenuForm.Text = "Register"
@@ -65,7 +66,8 @@
         Me.Hide()
         'Has to display log in menu once 
         'Then display score menu 
-        scoreMenuForm.Show()
+        loginMenuForm.setCount(4)
+        loginMenuForm.Show()
     End Sub
 
 End Class

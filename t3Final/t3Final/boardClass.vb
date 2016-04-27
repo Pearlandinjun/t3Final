@@ -1,7 +1,7 @@
 ﻿Public Class boardClass
     Public vaderFlag As Integer
     Private stone(2) As String
-    Private board(6, 6) As Integer
+    Public board(5, 5) As Integer
     Public player1 As playerClass = New playerClass()
     Public player2 As playerClass = New playerClass()
     Private score1 As Integer
@@ -213,7 +213,7 @@
 
                 Loop While flagFound = False
 
-            Case 5 To 18
+            Case 5 To 20
                 'Utilize 2 square offense from turns 5 to 10
 
                 For i As Integer = 0 To 5
@@ -404,7 +404,7 @@
 
                 '    Loop
 
-            Case 18 To 36
+            Case 21 To 36
                 'Utilize defense from turn 18 and on
 
                 For i As Integer = 0 To 5                                                      'For loop to step through the rows
@@ -500,14 +500,380 @@
 
     End Sub
 
-    Public Sub getScores(ByVal score1 As Integer, ByVal score2 As Integer)
-        'Calculate the score 
-        score1 = score1
-        score2 = score2
-    End Sub
+    Public Function getScores(ByVal turnNum As Integer)
+
+        Dim score As Integer = 0
+
+        For i As Integer = 0 To 5
+            For j As Integer = 0 To 5
+
+                Select Case i
+                    Case 0
+                        Select Case j
+                            Case 0
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j + 1) = turnNum And board(i + 2, j + 2) = turnNum And
+                                        board(i + 3, i + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j) = turnNum And board(i + 2, j) = turnNum And
+                                        board(i + 3, j) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 1
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j + 1) = turnNum And board(i + 2, j + 2) = turnNum And
+                                        board(i + 3, i + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j) = turnNum And board(i + 2, j) = turnNum And
+                                        board(i + 3, j) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 2
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j + 1) = turnNum And board(i + 2, j + 2) = turnNum And
+                                        board(i + 3, i + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j) = turnNum And board(i + 2, j) = turnNum And
+                                        board(i + 3, j) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 3
+                                If board(i, j) = turnNum Then
+                                    If board(i + 1, j) = turnNum And board(i + 2, j) = turnNum And
+                                        board(i + 3, j) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j - 1) = turnNum And board(i + 2, j - 2) = turnNum And
+                                        board(i + 3, j - 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 4
+                                If board(i, j) = turnNum Then
+                                    If board(i + 1, j) = turnNum And board(i + 2, j) = turnNum And
+                                        board(i + 3, j) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j - 1) = turnNum And board(i + 2, j - 2) = turnNum And
+                                        board(i + 3, j - 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 5
+                                If board(i, j) = turnNum Then
+                                    If board(i + 1, j) = turnNum And board(i + 2, j) = turnNum And
+                                        board(i + 3, j) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j - 1) = turnNum And board(i + 2, j - 2) = turnNum And
+                                        board(i + 3, j - 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+                        End Select
+
+                    Case 1
+                        Select Case j
+                            Case 0
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 1
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 2
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+                        End Select
+
+                    Case 2
+                        Select Case j
+                            Case 0
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 1
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 2
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+                        End Select
+
+                    Case 3
+                        Select Case j
+                            Case 0
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 1
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 2
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+                        End Select
+
+                    Case 4
+                        Select Case j
+                            Case 0
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 1
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 2
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+                        End Select
+
+                    Case 5
+                        Select Case j
+                            Case 0
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j + 1) = turnNum And board(i + 2, j + 2) = turnNum And
+                                        board(i + 3, i + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j) = turnNum And board(i + 2, j) = turnNum And
+                                        board(i + 3, j) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 1
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j + 1) = turnNum And board(i + 2, j + 2) = turnNum And
+                                        board(i + 3, i + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j) = turnNum And board(i + 2, j) = turnNum And
+                                        board(i + 3, j) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 2
+                                If board(i, j) = turnNum Then
+                                    If board(i, j + 1) = turnNum And board(i, j + 2) = turnNum And
+                                        board(i, j + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j + 1) = turnNum And board(i + 2, j + 2) = turnNum And
+                                        board(i + 3, i + 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j) = turnNum And board(i + 2, j) = turnNum And
+                                        board(i + 3, j) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 3
+                                If board(i, j) = turnNum Then
+                                    If board(i + 1, j) = turnNum And board(i + 2, j) = turnNum And
+                                        board(i + 3, j) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j - 1) = turnNum And board(i + 2, j - 2) = turnNum And
+                                        board(i + 3, j - 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 4
+                                If board(i, j) = turnNum Then
+                                    If board(i + 1, j) = turnNum And board(i + 2, j) = turnNum And
+                                        board(i + 3, j) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j - 1) = turnNum And board(i + 2, j - 2) = turnNum And
+                                        board(i + 3, j - 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+
+                            Case 5
+                                If board(i, j) = turnNum Then
+                                    If board(i + 1, j) = turnNum And board(i + 2, j) = turnNum And
+                                        board(i + 3, j) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+
+                                    If board(i + 1, j - 1) = turnNum And board(i + 2, j - 2) = turnNum And
+                                        board(i + 3, j - 3) = turnNum Then
+
+                                        score = score + 1
+                                    End If
+                                End If
+                        End Select
+                End Select
+
+            Next
+        Next
+
+        Return score
+
+    End Function
 
     Public Sub setScores()
-        'Open the file and add the scores
+
+        player1.score = getScores(player1.turnNumber)
+        player2.score = getScores(player2.turnNumber)
+
+        If player1.score = player2.score Then
+            player1.numTies = player1.numTies + 1
+            player2.numTies = player2.numTies + 1
+        ElseIf player1.score > player2.score Then
+            player1.numWins = player1.numWins + 1
+            player2.numLosses = player2.numLosses + 1
+        ElseIf player1.score < player2.score Then
+            player1.numLosses = player1.numLosses + 1
+            player2.numWins = player2.numWins + 1
+        End If
+
     End Sub
 
     Public Sub setStone(ByVal color As String, ByVal color2 As String)

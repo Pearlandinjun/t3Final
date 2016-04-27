@@ -13,3 +13,7 @@ C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.vbp
 C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.exe
 C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.xml
 C:\Users\valentin\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.pdb
+C:\Users\sean\Documents\GitHub\t3Final\t3Final\t3Final\bin\Debug\t3Final.exe.config
+C:\Users\sean\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.exe
+C:\Users\sean\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.xml
+C:\Users\sean\Documents\GitHub\t3Final\t3Final\t3Final\obj\Debug\t3Final.pdb

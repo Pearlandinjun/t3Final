@@ -78,12 +78,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="historyClass.vb" />
-    <Compile Include="loginForm.designer.vb">
-      <DependentUpon>loginForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="loginForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="mainMenu.designer.vb">
       <DependentUpon>mainMenu.vb</DependentUpon>
     </Compile>
@@ -105,7 +99,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="playerClass.vb" />
     <Compile Include="scoreMenu.designer.vb">
       <DependentUpon>scoreMenu.vb</DependentUpon>
     </Compile>
@@ -122,9 +115,6 @@
   <ItemGroup>
     <EmbeddedResource Include="GameBoard1.resx">
       <DependentUpon>GameBoard1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="loginForm.resx">
-      <DependentUpon>loginForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.vb</DependentUpon>

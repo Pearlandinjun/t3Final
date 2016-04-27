@@ -144,7 +144,7 @@
             'When the last color is choosen close the form and show the board form
             If colorCount = 0 Then
                 Me.Close()
-
+                GameBoard1.Show()
                 ''If player2RadioButton.Text = "Vader" Then
 
                 '    mainMenuForm.Board.setStone(cStone(1), "VaderBlack")        'Replace mainMenuForm with gameboard form

@@ -31,7 +31,13 @@
     Private Sub enterButton_Click(sender As Object, e As EventArgs) Handles enterButton.Click
         Try
             If Not nameError Or guest Then
-                If count = 3 Then
+                If count = 4 Then
+                    loginSucess = GameBoard1.Board.player1.Login(username)
+                    If loginSucess Then
+                        Me.Close()
+                        scoreMenuForm.Show()
+                    End If
+                ElseIf count = 3 Then
                     GameBoard1.Board.player1.Register(username)
                 ElseIf count = 2 Then
                     If guest Then
@@ -71,7 +77,7 @@
                             End If
                         End If
                     End If
-            End If
+                End If
             Else
                 errorLabel2.Text = "Invalid username."
             End If
@@ -149,6 +155,4 @@
     '1. Make function to look for username in file 
     '2. Error handling vader and guest as username
     '3. Testing 
-
-
 End Class

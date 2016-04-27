@@ -1,6 +1,10 @@
 ﻿Public Class playerClass
     Public name As String = ""
-    Public turnNumber As Integer = 0
+    Public turnNumber As Integer
+    Public numWins As Integer = 0
+    Public numLosses As Integer = 0
+    Public numTies As Integer = 0
+    Public score As Integer = 0
 
     'Constructor 
     Public Sub New()
@@ -100,5 +104,6 @@
     Public Sub setVader()
         name = "Vader"
     End Sub
+
 
 End Class

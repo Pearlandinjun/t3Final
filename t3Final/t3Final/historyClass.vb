@@ -1,17 +1,25 @@
 ﻿Public Class historyClass
-    Private name As playerClass = New playerClass()
+    Private playerName As playerClass = New playerClass()
     Private wins As Integer = 0
     Private loss As Integer = 0
     Private tie As Integer = 0
     Private opponent As String
 
     Public Sub New()
-        name.name = ""
+        playerName.name = ""
         wins = 0
         loss = 0
         tie = 0
         opponent = ""
     End Sub
+
+    Public Sub setName(ByVal username As String)
+        playerName.name = username
+    End Sub
+
+    Public Function getName()
+        Return playerName.name
+    End Function
 
     Public Sub getScore()
         'Retrieve scores from gameboard
@@ -20,6 +28,7 @@
         'loss =
         'tie =
     End Sub
+
     Public Sub setScore()
         'open file
         'Add the score to variable
@@ -27,4 +36,5 @@
         'if score = loss then loss +=1
         'if score = tie then tie +=1
     End Sub
+
 End Class

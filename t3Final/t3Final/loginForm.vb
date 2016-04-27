@@ -34,6 +34,7 @@
                 If count = 4 Then
                     loginSucess = GameBoard1.Board.player1.Login(username)
                     If loginSucess Then
+                        scoreMenuForm.playerHistory.setName(username)
                         Me.Close()
                         scoreMenuForm.Show()
                     End If

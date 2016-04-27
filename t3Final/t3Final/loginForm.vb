@@ -155,4 +155,8 @@
     '1. Make function to look for username in file 
     '2. Error handling vader and guest as username
     '3. Testing 
+
+    Private Sub loginMenuForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

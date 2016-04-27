@@ -43,15 +43,13 @@
     'Returns: 
     '   Registration complete
     Private Sub registerBtn_Click(sender As Object, e As EventArgs) Handles registerBtn.Click
+        loginMenuForm.enterUsernameLabel.Text = "Create username"
+        loginMenuForm.Text = "Register"
         Me.Hide()
         loginMenuForm.setCount(3)
         loginMenuForm.guestRadioButton.Visible = False
         loginMenuForm.Show()
-        ''Has to display modified log in menu once 
-        'loginMenuForm.guestRadioButton.Visible = False
-        'loginMenuForm.Text = "Register"
-        'loginMenuForm.Show()
-        ''Board.player1.Register()
+
     End Sub
 
     'History Button
@@ -67,6 +65,7 @@
         'Has to display log in menu once 
         'Then display score menu 
         loginMenuForm.setCount(4)
+        loginMenuForm.guestRadioButton.Visible = False
         loginMenuForm.Show()
     End Sub
 
